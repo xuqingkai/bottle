@@ -21,7 +21,7 @@ def index():
         return '<b>'+error+'</b>!'
     for row in rows:
         html += '<p>' + str(row[0]) + '</p>'
-    return '<div>'+html+sql+'</div>!'
+    return '<div>'+html+'</div>!'
 @route('/hello/<name>')
 def hello(name):
     db1 = db('/www/wwwroot/bottle/peis.db')
