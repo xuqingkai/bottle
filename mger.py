@@ -46,7 +46,7 @@ class db(object):
                 connect.commit()
                 data = cursor.rowcount
             elif sql.upper().startswith('DELETE '):
-                if ' SET ' not in sql.upper():
+                if ' WHERE ' not in sql.upper():
                     sql += ' WHERE ' +(' AND '.join([key+'=:'+key for key in params]))
                 cursor.execute(sql, params)
                 connect.commit()
